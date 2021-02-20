@@ -1,7 +1,5 @@
 npx prettier --write "**/*.{vue,js}"
 git remote add origin https://github.com/MuslimsNikahGoa/mng-web.git
-git push -u origin master
+git push -u origin masterhttps://github.com/MuslimsNikahGoa/mng-web/blob/master/src/fixer.txt
 git commit -m "project initialize: added vuetify, neflify, git"
 git config credential.helper ""
-un: MuslimsNikahGoa
-pw: ;\s$~W8eDk~N6r? 
