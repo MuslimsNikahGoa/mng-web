@@ -31,95 +31,380 @@
     </v-app-bar>
 
     <v-main>
-      <v-card :loading="loading" class="mx-auto my-12" max-width="370">
-        <template slot="progress">
-          <v-progress-linear
-            color="deep-purple"
-            height="5"
-            indeterminate
-          ></v-progress-linear>
-        </template>
+      
+      <v-container>
+        <v-row justify="center" >          
+          <v-col>
+            <v-card :loading="loading" class="mx-auto my-12" max-width="370">
+              <template slot="progress">
+                <v-progress-linear
+                  color="deep-purple"
+                  height="5"
+                  indeterminate
+                ></v-progress-linear>
+              </template>
 
-        <v-system-bar lights-out></v-system-bar>
+              <v-system-bar lights-out></v-system-bar>
 
-        <v-carousel
-          :continuous="false"
-          :cycle="cycle"
-          :show-arrows="false"
-          hide-delimiter-background
-          delimiter-icon="mdi-minus"
-          height="250"
-        >
-          <v-carousel-item
-            v-for="(slide, i) in slides"
-            :key="i"
-          >
-            <v-sheet
-              :color="colors[i]"
-              height="100%"
-              tile
-            >
-              <v-row
-                class="fill-height"
-                align="center"
-                justify="center"
+              <v-carousel
+                :continuous="false"
+                :cycle="cycle"
+                :show-arrows="false"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                height="250"
               >
-                <div class="display-3">
-                  {{ slide }} Slide
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                >
+                  <v-sheet
+                    :color="colors[i]"
+                    height="100%"
+                    tile
+                  >
+                    <v-row
+                      class="fill-height"
+                      align="center"
+                      justify="center"
+                    >
+                      <div class="display-1">
+                        {{ slide }} Slide
+                      </div>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+
+              <v-card-title>Cafe Badilico</v-card-title>
+
+              <v-card-text>
+                <v-row align="center" class="mx-0">
+                  <v-rating
+                    :value="4.5"
+                    color="amber"
+                    dense
+                    half-increments
+                    readonly
+                    size="14"
+                  ></v-rating>
+
+                  <div class="grey--text ml-4">
+                    4.5 (413)
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  $ • Italian, Cafe
                 </div>
-              </v-row>
-            </v-sheet>
-          </v-carousel-item>
-        </v-carousel>
 
-        <v-card-title>Cafe Badilico</v-card-title>
-
-        <v-card-text>
-          <v-row align="center" class="mx-0">
-            <v-rating
-              :value="4.5"
-              color="amber"
-              dense
-              half-increments
-              readonly
-              size="14"
-            ></v-rating>
-
-            <div class="grey--text ml-4">
-              4.5 (413)
-            </div>
-          </v-row>
-
-          <div class="my-4 subtitle-1">
-            $ • Italian, Cafe
-          </div>
-
-          <div>
-            Small plates, salads & sandwiches - an intimate setting with 12
-            indoor seats plus patio seating.
-          </div>
-        </v-card-text>
+                <div>
+                  Small plates, salads & sandwiches - an intimate setting with 12
+                  indoor seats plus patio seating.
+                </div>
+              </v-card-text>
 
 
-        <v-card-actions>
+              <v-card-actions>
 
-          <v-btn
-            color="orange"
-            text
-            @click="reserve"
-          >
-            Reserve
-          </v-btn>
+                <v-btn
+                  color="orange"
+                  text
+                  @click="reserve"
+                >
+                  Reserve
+                </v-btn>
 
-          <v-btn
-            color="orange"
-            text
-          >
-            Explore
-          </v-btn>
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
 
-        </v-card-actions>
-      </v-card>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col>
+            <v-card :loading="loading" class="mx-auto my-12" max-width="370">
+              <template slot="progress">
+                <v-progress-linear
+                  color="deep-purple"
+                  height="5"
+                  indeterminate
+                ></v-progress-linear>
+              </template>
+
+              <v-system-bar lights-out></v-system-bar>
+
+              <v-carousel
+                :continuous="false"
+                :cycle="cycle"
+                :show-arrows="false"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                height="250"
+              >
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                >
+                  <v-sheet
+                    :color="colors[i]"
+                    height="100%"
+                    tile
+                  >
+                    <v-row
+                      class="fill-height"
+                      align="center"
+                      justify="center"
+                    >
+                      <div class="display-1">
+                        {{ slide }} Slide
+                      </div>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+
+              <v-card-title>Cafe 2</v-card-title>
+
+              <v-card-text>
+                <v-row align="center" class="mx-0">
+                  <v-rating
+                    :value="4.5"
+                    color="amber"
+                    dense
+                    half-increments
+                    readonly
+                    size="14"
+                  ></v-rating>
+
+                  <div class="grey--text ml-4">
+                    4.5 (413)
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  $ • Italian, Cafe
+                </div>
+
+                <div>
+                  Small plates, salads & sandwiches - an intimate setting with 12
+                  indoor seats plus patio seating.
+                </div>
+              </v-card-text>
+
+
+              <v-card-actions>
+
+                <v-btn
+                  color="orange"
+                  text
+                  @click="reserve"
+                >
+                  Reserve
+                </v-btn>
+
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col>
+            <v-card :loading="loading" class="mx-auto my-12" max-width="370">
+              <template slot="progress">
+                <v-progress-linear
+                  color="deep-purple"
+                  height="5"
+                  indeterminate
+                ></v-progress-linear>
+              </template>
+
+              <v-system-bar lights-out></v-system-bar>
+
+              <v-carousel
+                :continuous="false"
+                :cycle="cycle"
+                :show-arrows="false"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                height="250"
+              >
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                >
+                  <v-sheet
+                    :color="colors[i]"
+                    height="100%"
+                    tile
+                  >
+                    <v-row
+                      class="fill-height"
+                      align="center"
+                      justify="center"
+                    >
+                      <div class="display-1">
+                        {{ slide }} Slide
+                      </div>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+
+              <v-card-title>Cafe Badilico</v-card-title>
+
+              <v-card-text>
+                <v-row align="center" class="mx-0">
+                  <v-rating
+                    :value="4.5"
+                    color="amber"
+                    dense
+                    half-increments
+                    readonly
+                    size="14"
+                  ></v-rating>
+
+                  <div class="grey--text ml-4">
+                    4.5 (413)
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  $ • Italian, Cafe
+                </div>
+
+                <div>
+                  Small plates, salads & sandwiches - an intimate setting with 12
+                  indoor seats plus patio seating.
+                </div>
+              </v-card-text>
+
+
+              <v-card-actions>
+
+                <v-btn
+                  color="orange"
+                  text
+                  @click="reserve"
+                >
+                  Reserve
+                </v-btn>
+
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col>
+            <v-card :loading="loading" class="mx-auto my-12" max-width="370">
+              <template slot="progress">
+                <v-progress-linear
+                  color="deep-purple"
+                  height="5"
+                  indeterminate
+                ></v-progress-linear>
+              </template>
+
+              <v-system-bar lights-out></v-system-bar>
+
+              <v-carousel
+                :continuous="false"
+                :cycle="cycle"
+                :show-arrows="false"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                height="250"
+              >
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                >
+                  <v-sheet
+                    :color="colors[i]"
+                    height="100%"
+                    tile
+                  >
+                    <v-row
+                      class="fill-height"
+                      align="center"
+                      justify="center"
+                    >
+                      <div class="display-1">
+                        {{ slide }} Slide
+                      </div>
+                    </v-row>
+                  </v-sheet>
+                </v-carousel-item>
+              </v-carousel>
+
+              <v-card-title>Cafe 2</v-card-title>
+
+              <v-card-text>
+                <v-row align="center" class="mx-0">
+                  <v-rating
+                    :value="4.5"
+                    color="amber"
+                    dense
+                    half-increments
+                    readonly
+                    size="14"
+                  ></v-rating>
+
+                  <div class="grey--text ml-4">
+                    4.5 (413)
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  $ • Italian, Cafe
+                </div>
+
+                <div>
+                  Small plates, salads & sandwiches - an intimate setting with 12
+                  indoor seats plus patio seating.
+                </div>
+              </v-card-text>
+
+
+              <v-card-actions>
+
+                <v-btn
+                  color="orange"
+                  text
+                  @click="reserve"
+                >
+                  Reserve
+                </v-btn>
+
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+
+
     </v-main>
 
     <v-bottom-navigation
